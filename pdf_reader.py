@@ -7,10 +7,10 @@ def speak(text):
     engine.setProperty('voice',voices[1].id)
     engine.say(text)
     engine.runAndWait()
-book_name=open('pythonstandard.pdf','rb')
+book_name=open('think.pdf','rb')
 pdfReader=PyPDF2.PdfFileReader(book_name)
 pages=pdfReader.numPages
 print(pages)
-page=pdfReader.getPage(1)
+page=pdfReader.getPage(18)
 book=page.extractText()
 speak(book)
